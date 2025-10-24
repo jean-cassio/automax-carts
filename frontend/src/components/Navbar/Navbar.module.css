@@ -1,0 +1,39 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(var(--light-orange), var(--dark-orange));
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  height: 80px;
+  z-index: 20;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  fill: #fff;
+}
+
+.logout {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  fill: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 648px) {
+  .header {
+    padding: 0px 10px;
+  }
+  .logo {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    fill: #fff;
+  }
+}
