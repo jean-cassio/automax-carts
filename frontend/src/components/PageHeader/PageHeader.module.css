@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.title {
+  font-size: x-large;
+  color: #0c0c0c;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
