@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: left;
+  color: var(--dark-gray);
+  gap: 0.5rem;
+}
+
+.field strong {
+  font-weight: bold;
+}
+
+.logo {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  fill: var(--light-orange);
+}
