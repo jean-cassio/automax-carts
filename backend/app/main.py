@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from app.api.routes import carts, sync
 from app.infrastructure.database.connection import init_db, get_db
@@ -46,6 +47,15 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="Automax API", lifespan=lifespan)
+
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[settings.FRONTEND_URL],  # Add your frontend URL here
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Routes
 app.include_router(carts.router)
