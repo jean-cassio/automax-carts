@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Optional, List
 from sqlmodel import SQLModel, Field, Relationship
 
@@ -18,6 +19,6 @@ class Cart(SQLModel, table=True):
 
     id: Optional[int] = Field(default=None, primary_key=True)
     user_id: int
-    date: str
+    date: datetime
 
     items: List[CartItem] = Relationship(back_populates="cart")
