@@ -1,0 +1,20 @@
+button {
+  font-size: medium;
+  font-weight: 500;
+  width: 100%;
+  max-width: var(--max-width);
+  height: fit-content;
+  align-items: center;
+  padding: 0.6em 1.2em;
+  border-radius: 0.5rem;
+  color: var(--color);
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  overflow: hidden;
+}
+
+button:hover {
+  border-color: var(--border-hover-color);
+}
