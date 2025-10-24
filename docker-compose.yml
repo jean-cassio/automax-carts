@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  backend:
+    container_name: automax-carts-backend
+    image: automax-carts-backend
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/app/app
+      - ./backend/data:/app/data
+    env_file:
+      - ./backend/.env 
+    restart: unless-stopped
+  app:
+    container_name: automax-carts-frontend
+    image: automax-carts-frontend
+    build: ./frontend
+    ports:
+      - "8080:8080"  
+    networks:
+      - app-network
+    env_file:
+      - ./frontend/.env 
+    restart: unless-stopped  
+networks:
+  app-network:
+    driver: bridge  
