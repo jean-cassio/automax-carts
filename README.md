@@ -95,7 +95,7 @@ npm install
 npm run dev
 ```
 
-- A aplicação estará disponível em `http://localhost:5173` (padrão do Vite).
+- A aplicação estará disponível em `http://localhost:8080`.
 - **Atenção:** Ao acessar o frontend pela primeira vez, será necessário fazer login com o usuário fictício abaixo:
 
   - **Email:** `admin@email.com`
